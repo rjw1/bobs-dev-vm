@@ -13,9 +13,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "../", "/git"
 
-   config.vm.provision :puppet do |puppet|
-     puppet.manifests_path = "puppet/manifests"
-     puppet.manifest_file  = "init.pp"
-   end
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "puppet/manifests"
+    puppet.manifest_file  = "init.pp"
+  end
 
+  config.vm.provision :shell, :path => "clone.sh"
 end
