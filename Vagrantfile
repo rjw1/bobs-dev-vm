@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "penelope"
 
-  config.vm.network :private_network, ip: "172.27.23.32"
+  config.vm.network :private_network, ip: "172.27.23.13"
 
   config.vm.synced_folder "../", "/git"
 
