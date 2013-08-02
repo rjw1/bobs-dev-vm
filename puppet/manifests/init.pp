@@ -26,6 +26,11 @@ package {'openguides':
 package {'vim':
         ensure => present,
         }
+# i hate nano
+package {'nano':
+        ensure => purged,
+        }
+
 
 package {'cpanminus':
         ensure => present,
